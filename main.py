@@ -13,3 +13,8 @@ random_nums_series.name = "Случайные_Числа"
 print(random_nums_series)
 # Сохранение датасета в файл .csv
 random_nums_series.to_csv("dataset.csv", index=False, header=False)
+
+# Min/Max/Sum значения
+min_val = random_nums_series.min()
+max_val = random_nums_series.max()
+sum_vals = random_nums_series.sum()
