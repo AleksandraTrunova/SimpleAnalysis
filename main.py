@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+plt.rcParams["figure.figsize"] = (15, 5)
+
 # -------- ПОЛУЧЕНИЕ НАБОРА ДАНЫЫХ
 # Массив случайных чисел
 random_nums_array = np.random.randint(-10000,10001, 1000)
@@ -37,3 +39,15 @@ with open("отчет_по_статистике.txt", "w", encoding="utf-8") as 
     file.write(f"Максимальное значение из набора данных: {max_val}\n")
     file.write(f"Сумма чисел набора данных: {sum_vals}\n")
     file.write(f"Среднеквадратическое отклонение набора данных: {std_deviation}\n")
+
+# ВИЗУАЛИЗАЦИЯ ДАННЫХ
+
+# -------------- Линейный график
+plt.plot(random_nums_series, color="green")
+
+# Подписи в таблице
+plt.title("Линейный График Случайных Значений Массива")
+plt.ylabel("Значение")
+plt.xlabel("Порядковый индекс элемента")
+
+plt.show()
