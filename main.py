@@ -18,3 +18,7 @@ random_nums_series.to_csv("dataset.csv", index=False, header=False)
 min_val = random_nums_series.min()
 max_val = random_nums_series.max()
 sum_vals = random_nums_series.sum()
+
+# Рассчеты Среднеквадратического отклонения и количества дубликатов
+std_deviation = random_nums_series.std(ddof=0)
+series_duplicates_count = random_nums_series.duplicated().sum()
