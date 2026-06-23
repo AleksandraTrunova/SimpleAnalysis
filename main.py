@@ -51,3 +51,17 @@ plt.ylabel("Значение")
 plt.xlabel("Порядковый индекс элемента")
 
 plt.show()
+
+# ------------- Гистограмма
+rounded_nums_series = (random_nums_series / 100).round().astype(int) * 100
+plt.hist(rounded_nums_series, bins=100, color="green")
+
+# Шаг значений по оси x
+x_ticks = np.arange(-10000, 10001, 1000)
+plt.xticks(x_ticks, rotation=45)
+
+# Подписи в таблице
+plt.title("Гистограмма Случайных Чисел Массива округленных до 100")
+plt.xlabel("Диапазон значений")
+plt.ylabel("Частота")
+plt.show()
