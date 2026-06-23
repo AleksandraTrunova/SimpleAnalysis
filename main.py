@@ -22,3 +22,10 @@ sum_vals = random_nums_series.sum()
 # Рассчеты Среднеквадратического отклонения и количества дубликатов
 std_deviation = random_nums_series.std(ddof=0)
 series_duplicates_count = random_nums_series.duplicated().sum()
+
+# Вывод в консоль
+print(f"Минимальное значение выборки: {min_val}")
+print(f"Количество повторяющихся значений: {series_duplicates_count}")
+print(f"Максимальное значение из набора данных: {max_val}")
+print(f"Сумма чисел набора данных: {sum_vals}")
+print(f"Среднеквадратическое отклонение набора данных: {std_deviation}")
